@@ -1,0 +1,51 @@
+@import "values";
+
+.main {
+    background-color: tan;
+    h1 {
+        color: #ddd;
+    }
+}
+
+h2 {
+    background-color: $brown1;
+}
+
+h3 {
+    color: $brown1;
+}
+.minor {
+    background-color: silver;
+    h1 {
+        text-decoration: underline;
+        @extend %center;
+    }
+    h2 {
+        text-decoration: line-through;
+        @extend %center;
+    }
+}
+
+// Bonus
+
+// 1
+
+.main h1:hover {
+    @extend %center;
+}
+
+// 2
+.minor h1 {
+    margin-bottom: 4*25px;
+}
+
+// 3
+.main h1 {
+    @include flex(flex-start, center)
+}
+.main h2 {
+    @include flex(center, center)
+}
+.main h3 {
+    @include flex(flex-end, center)
+}
